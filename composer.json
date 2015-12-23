@@ -1,0 +1,23 @@
+{
+    "name": "silentred/lumen-qiniu-storage",
+    "type": "library",
+    "description": "Qiniu Resource (Cloud) Storage for Lumen",
+    "keywords": ["qiniu", "storage", "sdk", "cloud", "laravel", "lumen"],
+    "license": "MIT",
+    "authors": [
+        {
+	      "name": "Jason W.",
+	      "email": "silentred3@gmail.com"
+	    }
+    ],
+    "require": {
+        "php": ">=5.3.3",
+        "qiniu/php-sdk": "~7.0",
+        "league/flysystem": "^1.0"
+    },
+    "autoload": {
+		"psr-4": {
+			"silentred\\QiniuStorage\\": "src/"
+		}
+    }
+}
