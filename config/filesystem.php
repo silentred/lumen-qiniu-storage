@@ -70,14 +70,14 @@ return [
             'driver'  => 'qiniu',
             'buckets' => [
                 'app'=> [
+                    'scheme' => 'http',
                     'domain' => '7xnpza.com1.z0.glb.clouddn.com',
-                    'name' => 'silentred-1',
-                    'https' => false
+                    'name' => 'silentred-1'
                 ],
                 'im' => [
+                    'scheme' => 'http',
                     'domain' => '7xnpza.com1.z0.glb.clouddn.com',
-                    'name' => 'im-service',
-                    'https' => false
+                    'name' => 'im-service'
                 ]
             ],
             'access_key'=> 'Hhi_s5sBGuRKOSqfTk_CIHwd8UyV-waRKEdeao-M',  //AccessKey

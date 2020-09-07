@@ -18,10 +18,12 @@ Developed based on https://github.com/zgldh/qiniu-laravel-storage
         'driver'  => 'qiniu',
         'buckets' => [
             'first'=> [
+                'scheme' => 'http',
                 'domain' => '7xnpza.com1.z0.glb.clouddn.com',
                 'name' => 'app-service'
             ],
             'second' => [
+                'scheme' => 'http',
                 'domain' => '7xpf8a.com1.z0.glb.clouddn.com',
                 'name' => 'im-service'
             ]
