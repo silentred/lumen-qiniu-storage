@@ -71,11 +71,13 @@ return [
             'buckets' => [
                 'app'=> [
                     'domain' => '7xnpza.com1.z0.glb.clouddn.com',
-                    'name' => 'silentred-1'
+                    'name' => 'silentred-1',
+                    'https' => false
                 ],
                 'im' => [
                     'domain' => '7xnpza.com1.z0.glb.clouddn.com',
-                    'name' => 'im-service'
+                    'name' => 'im-service',
+                    'https' => false
                 ]
             ],
             'access_key'=> 'Hhi_s5sBGuRKOSqfTk_CIHwd8UyV-waRKEdeao-M',  //AccessKey
