@@ -24,6 +24,7 @@ class QiniuAdapter extends AbstractAdapter
     private $toBucket = null;
     private $buckets = [];
     private $domain = null;
+    private $scheme = 'http';
     private $notify_url = null; //持久化处理后的回调地址
 
     private $auth = null;
@@ -41,7 +42,7 @@ class QiniuAdapter extends AbstractAdapter
         // set bucket and default domain
         $this->resolveBuckets($buckets);
 
-        $this->setPathPrefix('http://'.$this->domain.'/');
+        $this->setPathPrefix($this->scheme.'://'.$this->domain);
         $this->notify_url = $notify_url;
     }
 
@@ -54,6 +55,7 @@ class QiniuAdapter extends AbstractAdapter
         $this->bucket = $first_bucket['name'];
         $this->toBucket = $this->bucket;
         $this->domain = $first_bucket['domain'];
+        $this->scheme = isset($first_bucket['scheme']) ? $first_bucket['scheme'] : 'http';
     }
 
     public function withBucket($key){
@@ -61,7 +63,8 @@ class QiniuAdapter extends AbstractAdapter
             $this->bucket = $this->buckets[$key]['name'];
             $this->toBucket = $this->bucket;
             $this->domain = $this->buckets[$key]['domain'];
-            $this->setPathPrefix('http://'.$this->domain);
+            $this->scheme = isset($first_bucket['scheme']) ? $first_bucket['scheme'] : 'http';
+            $this->setPathPrefix($this->scheme.'://'.$this->domain);
         }
 
         return $this;

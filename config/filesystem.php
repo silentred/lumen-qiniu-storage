@@ -70,10 +70,12 @@ return [
             'driver'  => 'qiniu',
             'buckets' => [
                 'app'=> [
+                    'scheme' => 'http',
                     'domain' => '7xnpza.com1.z0.glb.clouddn.com',
                     'name' => 'silentred-1'
                 ],
                 'im' => [
+                    'scheme' => 'http',
                     'domain' => '7xnpza.com1.z0.glb.clouddn.com',
                     'name' => 'im-service'
                 ]
